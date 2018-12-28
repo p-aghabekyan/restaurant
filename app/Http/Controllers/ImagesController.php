@@ -76,9 +76,12 @@ class ImagesController extends Controller
      * @param  \App\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Image $image)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Image::findOrfail($id);
+        $data->img = $request->img;
+        $data->save();
+        return redirect('admin/images');
     }
 
     /**
@@ -93,5 +96,11 @@ class ImagesController extends Controller
         Storage::delete($image->img);
         $image->delete();
         return redirect()->back();
+    }
+
+    public function getImages()
+    {
+        $images = Image::all();
+        return view('admin.ajax.image_modal', compact("images"));
     }
 }

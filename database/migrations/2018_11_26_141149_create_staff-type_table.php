@@ -13,9 +13,10 @@ class CreateStaffTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('stuff_types', function (Blueprint $table) {
+        Schema::create('staff_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', '255');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +27,6 @@ class CreateStaffTypeTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('staff_types');
     }
 }

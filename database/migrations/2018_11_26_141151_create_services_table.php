@@ -16,7 +16,7 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('service_type_id');
-            $table->foreign('service_type_id')->references('id')->on('service_types');
+            $table->foreign('service_type_id')->references('id')->on('service_types')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class CreateMenusTable extends Migration
             $table->increments('id');
             $table->string('pic','255');
             $table->unsignedInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

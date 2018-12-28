@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use App\Languages;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCategory;
 
@@ -40,6 +41,12 @@ class CategoriesController extends Controller
         $data = new Categories();
         $data->name = $request->name;
         $data->save();
+        foreach($request->data as $key){
+            if(empty($key['description'])){
+                $key['description'] = '';
+            }
+            $data->languages()->attach($key['language_id'], ['name' => $key['name'], 'description' => $key['description']]);
+        }
         return redirect('/admin/categories');
     }
 
@@ -62,7 +69,8 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        $data = Categories::find($id);
+        $data['categories'] = Categories::with('languages')->find($id);
+        $data['languages'] = Languages::all();
         return view('admin.categories.edit', compact('data'));
     }
 
@@ -75,9 +83,20 @@ class CategoriesController extends Controller
      */
     public function update(StoreCategory $request, $id)
     {
-        $data = Categories::find($id);
+        $data = Categories::with('languages')->find($id);
         $data->name = $request->name;
         $data->save();
+        foreach($data->languages as $key){
+            $data->languages()->detach($key['language_id']);
+        }
+        if (isset($request->data)) {
+            foreach ($request->data as $key) {
+                if (empty($key['description'])) {
+                    $key['description'] = '';
+                }
+                $data->languages()->attach($key['language_id'], ['name' => $key['name'], 'description' => $key['description']]);
+            }
+        }
         flash('You have successfully updated')->success();
         return redirect('/admin/categories');
     }

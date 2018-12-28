@@ -19,8 +19,8 @@ class CreateMenusRestTable extends Migration
             $table->unsignedInteger('price')->nullable();
             $table->unsignedInteger('menu_id');
             $table->unsignedInteger('restaurant_id');
-            $table->foreign('menu_id')->references('id')->on('menus');
-            $table->foreign('restaurant_id')->references('id')->on('restaurants');
+            $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
+            $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateMenusRestTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('menus_restaurants');
     }
 }

@@ -1,34 +1,49 @@
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 window.Vue = require('vue');
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+var VueScrollTo = require('vue-scrollto');
+import VueRouter from 'vue-router';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('header-component', require('./components/Header.vue'));
+// Vue.component('service-component', require('./components/ServiceComponent'));
+// Vue.component('reservation-component', require('./components/ReservationComponent'));
+// Vue.component('gallery-component', require('./components/GalleryComponent'));
+// Vue.component('blog-component', require('./components/BlogComponent'));
+import menuComponent from './components/MenuComponent';
+import aboutComponent from './components/AboutComponent';
+Vue.component('footer-component', require('./components/FooterComponent'));
 
-// const files = require.context('./', true, /\.vue$/i)
+Vue.use(VueScrollTo, {
+    container: "body",
+    duration: 500,
+    easing: "ease",
+    offset: 0,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+});
+Vue.use(VueRouter);
+Vue.use(VueAxios, axios);
 
-// files.keys().map(key => {
-//     return Vue.component(_.last(key.split('/')).split('.')[0], files(key))
-// })
+const routes = [
+    { path: '/', component: menuComponent },
+    { path: '/home', component: menuComponent },
+    { path: '/about', component: aboutComponent },
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+];
+
+const router = new VueRouter({
+    routes,
+    linkActiveClass: "active",
+});
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });

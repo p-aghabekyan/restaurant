@@ -18,7 +18,7 @@ class CreateHolsTable extends Migration
             $table->unsignedInteger('volume')->nullable();
             $table->unsignedInteger('order')->nullable();
             $table->unsignedInteger('restaurant_id');
-            $table->foreign('restaurant_id')->references('id')->on('restaurants');
+            $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
             $table->timestamps();
         });
     }

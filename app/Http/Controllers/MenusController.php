@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Languages;
 use Illuminate\Http\Request;
 use App\Menus;
 use App\Categories;
@@ -27,14 +28,14 @@ class MenusController extends Controller
      */
     public function create()
     {
-        $categories = Categories::all();
-        return view('admin.menus.create', compact('categories'));
+        $data['categories'] = Categories::all();
+        return view('admin.menus.create', compact('data'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreMenu $request)
@@ -43,13 +44,18 @@ class MenusController extends Controller
         $data->pic = $request->pic;
         $data->category_id = $request->category;
         $data->save();
+        if (isset($request->data)) {
+            foreach ($request->data as $key) {
+                $data->languages()->attach($key['language_id'], ['name' => $key['name']]);
+            }
+        }
         return redirect('/admin/menus');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -60,29 +66,38 @@ class MenusController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $data['menus'] = Menus::find($id);
+        $data['menus'] = Menus::with('languages')->find($id);
         $data['categories'] = Categories::all();
+        $data['languages'] = Languages::all();
         return view('admin.menus.edit', compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(StoreMenu $request, $id)
     {
-        $data = new Menus();
+        $data = Menus::with('languages')->findOrFail($id);
         $data->pic = $request->pic;
         $data->category_id = $request->category;
         $data->save();
+        foreach($data->languages as $key){
+            $data->languages()->detach($key['language_id']);
+        }
+        if (isset($request->data)) {
+            foreach ($request->data as $key) {
+                $data->languages()->attach($key['language_id'], ['name' => $key['name']]);
+            }
+        }
         flash('You have successfully updated')->success();
         return redirect('/admin/menus');
     }
@@ -90,7 +105,7 @@ class MenusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

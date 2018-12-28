@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2cab5aa6-86ae-493d-b38a-c9282570f5fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../resources/views/admin/hols/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/admin/hols/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/admin/hols/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/admin/staff-type/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/admin/staff-type/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/admin/staff-type/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Hols.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Hols.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/HolsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/MenusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/MenusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/RestaurantsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/RestaurantsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Requests/StoreRestaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Requests/StoreRestaurant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Languages.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Languages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Menus.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Menus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Restaurants.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Restaurants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140421_create_restaurants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140421_create_restaurants_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140510_create_languages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140510_create_languages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140519_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140519_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140520_create_menus_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140520_create_menus_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140605_create_rest-language_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140605_create_rest-language_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140619_create_category-language_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140619_create_category-language_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140659_create_hols_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140659_create_hols_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_140744_create_hols-lang_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_140744_create_hols_lang_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_141052_create_menus-lang_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_141052_create_menus_lang_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_141116_create_menus-rest_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_141116_create_menus-rest_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_141149_create_staff-type_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_141149_create_staff-type_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_141150_create_service_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_141150_create_service_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_141151_create_services_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_141151_create_services_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_141202_create_service-rest_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_141202_create_service_rest_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_142012_create_service-lang_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_142012_create_service_lang_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_142037_create_stuffs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_142037_create_staffs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_142204_create_staff-lang_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_11_26_142204_create_staff_lang_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_142219_create_staff-rest_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_11_26_142302_create_staff-type-lang_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/categories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/images/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/images/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/images/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/images/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/menus/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/menus/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/menus/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/menus/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/menus/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/menus/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/restaurants/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/restaurants/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/restaurants/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/restaurants/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/admin/restaurants/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/admin/restaurants/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="339544040">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/assets/vendor_components/flexslider/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/assets/dropify/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/Flot/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/Magnific-Popup-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/Web-Ticker-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/bootstrap-daterangepicker/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/bootstrap-markdown-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/chartist-js-develop/chartist-js-develop/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/cryptocoins-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/easypiechart/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/eve-raphael/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/flag-icon/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/flexslider/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/ion.rangeSlider/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jQuery-slimScroll-1.3.8/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jquery-knob/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jquery-slimscroll/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jquery-steps-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jquery-toast-plugin-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jquery-ui/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jquery-validation-1.17.0/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/jquery-wizard-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/lightbox-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/morris.js/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/perfect-scrollbar-master/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/packages/babel-config/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/packages/bundle/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/packages/eslint-config-popper/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/packages/popper/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/packages/test-utils/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/packages/test/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/popper/packages/tooltip/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_components/select2/package.json" />
+      <path value="$PROJECT_DIR$/assets/vendor_plugins/upload/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1900" />
+    <option name="height" value="1044" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2cab5aa6-86ae-493d-b38a-c9282570f5fe" name="Default Changelist" comment="" />
+      <created>1545311675641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545311675641</updated>
+      <workItem from="1545311678427" duration="2000" />
+      <workItem from="1545311706454" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-3" y="0" width="1926" height="1054" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

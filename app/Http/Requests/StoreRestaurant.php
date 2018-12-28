@@ -25,8 +25,8 @@ class StoreRestaurant extends FormRequest
     {
         return [
             'phone' => 'required|max:255',
-            'address' => 'required|max:255',
             'order' => 'required|integer',
+            'data' => 'required',
         ];
     }
 }

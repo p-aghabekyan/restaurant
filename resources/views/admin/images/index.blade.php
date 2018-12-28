@@ -13,14 +13,16 @@
                     <tr>
                         <td>#</td>
                         <td>Image</td>
+                        <td>Img URL</td>
                         <td>Actions</td>
                     </tr>
                     @foreach($data as $d)
                         <tr>
                             <td>{{$loop->index + 1}}</td>
                             <td><img class="img-responsive" height="150px" src="{{ asset("$d->img") }}" alt=""></td>
+                            <td>{{ $d->img }}</td>
                             <td>
-                                <a href="/admin/images/{{$d->id}}/edit" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                                {{--<a href="/admin/images/{{$d->id}}/edit" class="btn btn-primary"><i class="fa fa-edit"></i></a>--}}
                                 <button onclick="admin.deleteAction('{{ $d->id }}', '/admin/images/')" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>

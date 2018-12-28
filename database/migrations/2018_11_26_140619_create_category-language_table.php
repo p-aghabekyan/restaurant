@@ -19,8 +19,8 @@ class CreateCategoryLanguageTable extends Migration
             $table->text('description');
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('language_id');
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('language_id')->references('id')->on('languages');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('language_id')->references('id')->on('languages')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateCategoryLanguageTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('category_language');
     }
 }
